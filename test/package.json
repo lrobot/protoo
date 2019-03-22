@@ -1,14 +1,21 @@
 {
-  "private": true,
   "name": "protoo-test",
+  "private": true,
   "scripts": {
-    "test": "tap --bail --color --reporter=spec test.js"
+    "lint": "eslint -c .eslintrc.js __tests__",
+    "test": "jest",
+    "coverage": "cd .. && jest --coverage --config test/package.json && opn coverage/lcov-report/index.html"
   },
-  "dependencies": {
-    "tap": "^12.0.1"
+  "jest": {
+    "verbose": true,
+    "testEnvironment": "node",
+    "rootDir": "../"
   },
   "devDependencies": {
-    "gulp": "^4.0.0",
-    "gulp-eslint": "^5.0.0"
+    "eslint": "^5.15.1",
+    "eslint-plugin-jest": "^22.3.0",
+    "jest": "^24.1.0",
+    "jest-tobetype": "^1.2.2",
+    "opn-cli": "^4.0.0"
   }
 }
