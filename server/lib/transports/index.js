@@ -4,5 +4,6 @@ const WebSocketServer = require('./WebSocketServer');
 
 module.exports =
 {
-	WebSocketServer : WebSocketServer
+	WebSocketServer : WebSocketServer,
+	TcpSocketServer : TcpSocketServer
 };
